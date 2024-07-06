@@ -1,0 +1,23 @@
+[package]
+name = "descension"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+bevy = "0.13"
+
+# Enable a small amount of optimization in debug mode
+[profile.dev]
+opt-level = 1
+
+# Enable high optimizations for dependencies (incl. Bevy), but not for game code:
+[profile.dev.package."*"]
+opt-level = 3
+
+# Note that bevy is set up for automatic dynamic linking via `cargo add bevy -F dynamic_linking`
+
+# for Linux LLD linking
+[target.x86_64-unknown-linux-gnu]
+linker = "clang"
+rustflags = ["-C", "link-arg=-fuse-ld=lld"]
+
