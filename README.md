@@ -6,11 +6,11 @@ Descend, and Arise once more.
 
 ## Compatibility
 
-[!WARNING]
-Due to the rapid development seen by some of the utilized libraries, this table is maintained to track when major version updates occur and ensure interoperabiliity between libraries (as some may not respect `SemVer`).
+> [!WARNING]
+> Due to the rapid development seen by some of the utilized libraries, this table is maintained to track when major version updates occur and ensure interoperabiliity between libraries (as some may not respect `SemVer`).
 
-[!CAUTION]
-As I am new to the concept and the documentation appears to be oriented towards libraries, the guidelines for `SemVer` may be broken unintentionally at times. In case an ammendment is not made, or made on time, please always reference this table to ensure no errors occur as a direct result.
+> [!CAUTION]
+> As I am new to the concept and the documentation appears to be oriented towards libraries, the guidelines for `SemVer` may be broken unintentionally at times. In case an ammendment is not made, or made on time, please always reference this table to ensure no errors occur as a direct result.
 
 | descension | rust | bevy | bevy_ecs_ldtk | LDtk | bevy_mod_aseprite | aseprite |
 | --- | --- | --- | --- | --- | --- | --- |

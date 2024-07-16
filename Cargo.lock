@@ -343,6 +343,32 @@ dependencies = [
 ]
 
 [[package]]
+name = "bevy_aseprite_derive"
+version = "0.3.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "192e876a533ef9110d47dde52a61c8cd4d1bfd311311ad661e1378eaff6bbdb4"
+dependencies = [
+ "bevy_aseprite_reader",
+ "heck",
+ "proc-macro-error",
+ "quote",
+ "syn 2.0.68",
+]
+
+[[package]]
+name = "bevy_aseprite_reader"
+version = "0.1.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "baeca09bb10df657a4e80f87768e3c918443dbbe2493a961dc2e254a6b0feafb"
+dependencies = [
+ "flate2",
+ "image",
+ "nom",
+ "thiserror",
+ "tracing",
+]
+
+[[package]]
 name = "bevy_asset"
 version = "0.13.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -704,6 +730,17 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "a0d7ef7f2a826d0b19f059035831ce00a5e930435cc53c61e045773d0483f67a"
 dependencies = [
  "glam",
+]
+
+[[package]]
+name = "bevy_mod_aseprite"
+version = "0.7.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "a9d827b426f1e5dc76b4ae60b2c9541c56a3d6bf3143d6a759219c9ed8f64051"
+dependencies = [
+ "bevy",
+ "bevy_aseprite_derive",
+ "bevy_aseprite_reader",
 ]
 
 [[package]]
@@ -1523,6 +1560,9 @@ name = "descension"
 version = "0.1.0"
 dependencies = [
  "bevy",
+ "bevy_mod_aseprite",
+ "ron",
+ "serde",
 ]
 
 [[package]]
@@ -1980,6 +2020,12 @@ dependencies = [
  "widestring",
  "winapi",
 ]
+
+[[package]]
+name = "heck"
+version = "0.4.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "95505c38b4572b2d910cecb0281560f54b440a19336cbbcb27bf6ce6adc6f5a8"
 
 [[package]]
 name = "hermit-abi"
@@ -2722,6 +2768,30 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "6d37c51ca738a55da99dc0c4a34860fd675453b8b36209178c2249bb13651284"
 dependencies = [
  "toml_edit",
+]
+
+[[package]]
+name = "proc-macro-error"
+version = "1.0.4"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "da25490ff9892aab3fcf7c36f08cfb902dd3e71ca0f9f9517bea02a73a5ce38c"
+dependencies = [
+ "proc-macro-error-attr",
+ "proc-macro2",
+ "quote",
+ "syn 1.0.109",
+ "version_check",
+]
+
+[[package]]
+name = "proc-macro-error-attr"
+version = "1.0.4"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "a1be40180e52ecc98ad80b184934baf3d0d29f979574e439af5a55274b35f869"
+dependencies = [
+ "proc-macro2",
+ "quote",
+ "version_check",
 ]
 
 [[package]]

@@ -1,0 +1,9 @@
+(
+    name: Name(
+        first: "Olivrara",
+        family: "Amandrovault"
+    ),
+
+    // PronounSet enum
+    pronoun_set: Female
+)
