@@ -1,1 +1,0 @@
-const DIALOGUE_A:&str = "la la la stuff";
